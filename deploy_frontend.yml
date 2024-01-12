@@ -2,8 +2,8 @@
   hosts: "{{ deploy_hosts }}"
   remote_user: "{{default_user}}"
   ansible.builtin.include_vars:
-    file: "vars/all.yml"
-  
+  vars_files:
+    - "vars/all.yml"
 
   roles:
     - frontend
