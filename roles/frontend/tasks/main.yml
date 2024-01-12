@@ -1,12 +1,12 @@
 
-- include_tasks: remove_html.yml
+- ansible.builtin.include_tasks: remove_html.yml
   become: true
 
-- include_tasks: copy_html.yml
+- ansible.builtin.include_tasks: copy_html.yml
   become: true
 
-- include_tasks: stop_nginx.yml
+- ansible.builtin.include_tasks: stop_nginx.yml
   become: true
 
-- include_tasks: start_nginx.yml
+- ansible.builtin.include_tasks: start_nginx.yml
   become: true
