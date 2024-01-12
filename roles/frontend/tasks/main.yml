@@ -1,12 +1,12 @@
 
-- include: remove_html.yml
+- include_tasks: remove_html.yml
   become: true
 
-- include: copy_html.yml
+- include_tasks: copy_html.yml
   become: true
 
-- include: stop_nginx.yml
+- include_tasks: stop_nginx.yml
   become: true
 
-- include: start_nginx.yml
+- include_tasks: start_nginx.yml
   become: true
