@@ -1,8 +1,9 @@
 - name: admin user add
   hosts: "{{ deploy_hosts }}"
   remote_user: "{{default_user}}"
-  vars_files:
-    - "vars/all.yml"
+  ansible.builtin.include_vars:
+    file: vars/all.yml
+  
 
   roles:
     - frontend
