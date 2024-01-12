@@ -2,7 +2,7 @@
   hosts: "{{ deploy_hosts }}"
   remote_user: "{{default_user}}"
   ansible.builtin.include_vars:
-    file: vars/all.yml
+    file: "vars/all.yml"
   
 
   roles:
