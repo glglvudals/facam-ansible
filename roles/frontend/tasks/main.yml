@@ -2,7 +2,8 @@
 - name: remove_html
   ansible.builtin.include_tasks: 
     file: remove_html.yml
-  become: true
+  vars: 
+    ansible_become: true
 
 - name: copy_html
   ansible.builtin.include_tasks: 
