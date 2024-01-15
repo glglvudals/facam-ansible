@@ -1,9 +1,18 @@
 
-- include: copy_target_jar.yml
-  become: true
+- name: copy_target_jar
+  ansible.builtin.include_tasks: 
+    file: copy_target_jar.yml
+  vars:
+    ansible_become: true
 
-- include: kill_java.yml
-  become: true
+- name: kill_java
+  ansible.builtin.include_tasks: 
+    file: kill_java.yml
+  vars:
+    ansible_become: true
 
-- include: run_java.yml
-  become: true
+- name: run_java
+  ansible.builtin.include_tasks: 
+    file: run_java.yml
+  vars:
+    ansible_become: true
