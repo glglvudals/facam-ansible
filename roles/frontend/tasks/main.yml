@@ -8,14 +8,17 @@
 - name: copy_html
   ansible.builtin.include_tasks: 
     file: copy_html.yml
-  become: true
+  vars:
+    ansible_become: true
 
 - name: stope_nginx
   ansible.builtin.include_tasks: 
     file: stop_nginx.yml
-  become: true
+  vars:
+    ansible_become: true
 
 - name: start_nginx
   ansible.builtin.include_tasks: 
     file: start_nginx.yml
-  become: true
+  vars:
+    ansible_become: true
